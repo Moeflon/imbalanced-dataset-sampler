@@ -50,7 +50,7 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
         elif isinstance(dataset, torch.utils.data.Subset):
             return dataset.dataset.imgs[idx][1]
         elif isinstance(dataset, Dataset):
-            return dataset.dataset[idx].y
+            return dataset[idx].y
         else:
             raise NotImplementedError
                 
